@@ -20,6 +20,22 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* modal is what is holding everything inside it,
+  so we make it a flex container */
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+}
+/* the header and x button are in the same div here.
+ we turn it into a flexbox to align them horizontally together
+ (remember they are block elements otherwise)*/
+.header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .icon {
@@ -33,6 +49,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 .close-button {
@@ -48,6 +69,7 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  flex-shrink: 0;
 }
 
 button {
